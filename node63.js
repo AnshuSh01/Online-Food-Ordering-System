@@ -1,0 +1,83 @@
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackEnd</title>
+    <link rel="stylesheet" href="backend.css">
+</head>
+<body>
+    <header>
+        <div id="head"><a class="header" href="">Home</a>
+            <a  class="header" href="">Contact</a>
+            <a href="" class="header">About</a>
+            <a href="" class="header">Address</a>
+        </div>
+        
+    </header>
+    <div class="button">
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, debitis magnam totam similique perferendis omnis itaque temporibus est. Numquam, quae.</p></div>
+    <button id="btn" onclick="showhide()">Show/Hide</button>
+    <script>
+        function showhide(){
+        if(para.style.display!='none'){
+            para.style.display='none';
+        }
+        else{
+            para.style.display='block';
+        } }
+    </script>
+    
+    <!----<script>
+        <script>
+            para.addEventListener('mouseover',function run(){
+            alert('mouse inside')
+        })
+        function showhide(){
+            let btn = document.getElementById('btn');
+        let para = document.getElementById('para'); 
+        if(para.style.display != 'none'){
+        para.style.display = 'none';
+        }
+        else{
+        para.style.display = 'block';
+        }
+        }
+    </script>
+        <script>
+        let s=document.getElementById("head");
+        console.log(s);
+        let temp=document.querySelector(".header");
+        console.log(temp);
+    </script>
+        document.getElementById('head').innerHTML="<h1>ANSHU SHARMA GOOD BOY"
+    </script> <---->
+    <section class="sec">
+        <div class="books">
+            <h3>JAVA</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quae consequatur ipsam atque porro incidunt id tempore dolorem cumque alias non, quisquam veniam omnis perspiciatis voluptate unde corrupti hic ipsa ad labore placeat? Molestiae quaerat inventore reprehenderit? Commodi perferendis reiciendis accusamus illo esse? Nostrum ullam eos vero culpa inventore. Saepe!</p>
+        </div>
+        <hr>
+        <div class="books"><h3>C++</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nostrum magni est id sed quidem nisi voluptas beatae dolorem molestiae illum nemo dolore laudantium, voluptatibus minima magnam maiores modi consequuntur. Soluta placeat aliquam atque aspernatur reprehenderit, animi vero sed aperiam inventore exercitationem non accusamus deleniti dicta hic, possimus doloribus magni.</p></div>
+        <hr>
+        <div class="books"><h3>PYTHON</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nostrum magni est id sed quidem nisi voluptas beatae dolorem molestiae illum nemo dolore laudantium, voluptatibus minima magnam maiores modi consequuntur. Soluta placeat aliquam atque aspernatur reprehenderit, animi vero sed aperiam inventore exercitationem non accusamus deleniti dicta hic, possimus doloribus magni.</p></div>
+    </section>
+    
+</body>
+</html>`);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, architecto? Consequatur magnam praesentium facilis ipsam repudiandae fugiat provident error temporibus!</p>
+    </div>
+    <span id="sp"></span>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+      function display(){
+        let time=new Date();
+        let s=document.getElementById('sp').innerHTML=time;
+      }
+      setInterval(display, 1000);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+#head{
+   text-align: center;
+   text-decoration: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: rgb(224, 135, 135);
+   
+}
+.header{
+    text-decoration: none;
+    padding: 2.2rem;
+}
+#head a:hover{
+    color: aqua;
+}
+#head a{
+    height: 0px;
+}
+section{
+    display: flex;
+}
+section .books{
+    width: 400px;
+}
+.button{
+    padding-top: 40px;
+}
+.but{
+    padding: 10px 10px;
+    text-align: center;
+}
+.but{
+    cursor: pointer;
+}
+
